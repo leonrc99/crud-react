@@ -31,13 +31,13 @@ function Register() {
 
         <div>
             <div className="jumbotron jumbotron-fluid">
-                <div className="container">
-                    <h1 className="display-4">Cadastro de Pacientes</h1>
+                <div className="container col-md-10 offset-md-1">
+                    <h1 className="display-4 ">Cadastro de Pacientes</h1>
                     <p className="lead">Faça aqui o cadastro de pacientes</p>
                 </div>
             </div>
 
-            <div className="row">
+            <div className="row col-md-10 offset-md-1">
                 <div className="col-md-5">
                     <RegisterForms addEdit={addEdit} />
                 </div>
