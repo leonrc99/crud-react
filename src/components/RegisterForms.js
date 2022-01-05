@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function RegisterForms(props) {
 
@@ -8,10 +8,22 @@ function RegisterForms(props) {
         fullName: '',
         tellphone: '',
         email: '',
-        address: ''
+        city: ''
     }
 
     let [values, setValues] = useState(initialValues);
+
+    useEffect( () => {
+        if(props.currentId == ''){
+            setValues({
+                ...initialValues
+            })
+        } else {
+            setValues({
+                ...props.dataPatients[props.currentId]
+            })
+        }
+    }, [props.currentId, props.dataPatients])
 
     const inputChange = e => {
         let { name, value } = e.target
@@ -65,11 +77,11 @@ function RegisterForms(props) {
                 </div>
             </div>
             <div className="form-group">
-                <textarea className="form-control" placeholder="Endereço" name="address" value={values.address} onChange={inputChange} />
+                <textarea className="form-control" placeholder="Cidade" name="city" value={values.city} onChange={inputChange} />
             </div>
 
             <div className="form-group">
-                <input type="submit" value="Salvar" className="btn btn-primary btn-block" />
+                <input type="submit" value={ props.currentId == '' ? 'Salvar' : 'Atualizar'} className="btn btn-info btn-block" />
             </div>
 
         </form>
