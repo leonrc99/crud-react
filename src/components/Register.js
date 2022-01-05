@@ -59,6 +59,7 @@ function Register() {
                                         <td> {dataPatients[id].fullName} </td>
                                         <td> {dataPatients[id].tellphone} </td>
                                         <td> {dataPatients[id].email} </td>
+                                        <td> {dataPatients[id].address} </td>
                                     </tr>
                                 })
                             }
