@@ -92,10 +92,10 @@ function Register() {
                                         <td> {dataPatients[id].email} </td>
 
                                         <td>
-                                            <a className="btn btn-info" href="">
+                                            <a className="btn btn-info" href="#">
                                                 <i className="fas fa-cog fa-pencil-alt" onClick={ () => {setCurrentId(id)} }></i>
                                             </a>
-                                            <a className="btn btn-danger" href="">
+                                            <a className="btn btn-danger" href="#">
                                                 <i className="fas fa-cog fa-trash-alt" onClick={ () => deletePatient(id) }></i>
                                             </a>
                                         </td>
