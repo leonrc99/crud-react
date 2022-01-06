@@ -81,7 +81,7 @@ function RegisterForms(props) {
             </div>
 
             <div className="form-group">
-                <input type="submit" value={ props.currentId == '' ? 'Salvar' : 'Atualizar'} className="btn btn-info btn-block" />
+                <input type="submit" value={ props.currentId === '' ? 'Salvar' : 'Atualizar'} className="btn btn-info btn-block" />
             </div>
 
         </form>
