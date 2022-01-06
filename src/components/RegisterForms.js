@@ -14,7 +14,7 @@ function RegisterForms(props) {
     let [values, setValues] = useState(initialValues);
 
     useEffect( () => {
-        if(props.currentId == ''){
+        if(props.currentId === ''){
             setValues({
                 ...initialValues
             })
